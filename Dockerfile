@@ -19,11 +19,12 @@ ENV HOME=/home/bayes
 
 # python will install dependencies here
 ENV PATH="${PATH}:${HOME}/.local/bin"
+ENV PYTHONPATH="${PYTHONPATH}:${HOME}/statreth"
 
 COPY --chown=hermes ./requirements.txt ./
 RUN pip install -r requirements.txt
 
-WORKDIR $HOME/statres
+WORKDIR $HOME/statreth
 
 # wrap in `tini` to handle ctrl+c
 # https://github.com/jupyter/docker-stacks/blob/5cd0b55db86ff0ce3918a4b2addde5d9434cf62e/base-notebook/Dockerfile#L149
