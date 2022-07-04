@@ -28,4 +28,4 @@ def pi(samples, mass):
     """Computes Percentile Interval for an array of `samples`"""
     low = (1 - mass) / 2
     high = 1 - low
-    return [np.quantile(samples, low), np.quantile(samples, high)]
+    return np.quantile(samples, [low, high])

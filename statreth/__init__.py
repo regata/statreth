@@ -1,1 +1,1 @@
-from .statreth import *
+from .intervals import *
