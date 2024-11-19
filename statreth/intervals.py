@@ -1,5 +1,7 @@
 import numpy as np
 
+__all__ = ["hdi", "pi"]
+
 
 def hdi(samples, mass):
     """Estimates Highest Density Interval (HDI) for an array of `samples` for a
