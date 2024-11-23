@@ -1,10 +1,13 @@
 import numpy as np
 
+__all__ = ["hdi", "pi"]
+
 
 def hdi(samples, mass):
-    """Estimates Highest Density Interval (HDI) for an array of `samples` for a given probability `mass`
-    The HDI is the minimum width Bayesian credible interval (BCI).
-    Note: it asssumes that the underlying distribution is unimodal
+    """Estimates Highest Density Interval (HDI) for an array of `samples` for a
+    given probability `mass` The HDI is the minimum width Bayesian credible
+    interval (BCI). Note: it asssumes that the underlying distribution is
+    unimodal
     """
     # number of samples included in HDI
     n_inc = int(mass * len(samples))
